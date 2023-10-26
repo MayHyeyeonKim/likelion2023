@@ -1,0 +1,64 @@
+# Virtual Environment
+venv/
+env/
+virtualenv/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+__init__.pyc
+__init__.pyo
+*.pyd
+
+# Caches
+.cachet/
+*.cache
+
+# Log files
+*.log
+
+# Python-specific
+*.pyc
+*.pyo
+*.pyd
+
+# Django migration files
+*.db
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code settings
+.vscode/
+
+# IDE settings
+.idea/
+*.iml
+
+# Node.js
+node_modules/
+
+# Compiled binary addons
+node_modules/binding/
+
+# SQLite database file
+db.sqlite3
