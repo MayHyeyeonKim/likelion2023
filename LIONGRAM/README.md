@@ -9,7 +9,7 @@ LIONGRAM is a Django-based clone of Instagram.
 **Description:**
 This image illustrates the modeling process for the LIONGRAM application.
 
-## Trouble Shooting
+## Troubleshooting
 
 #### 1 
 ![Pillow_Err](https://github.com/MayHyeyeonKim/likelion2023/blob/main/LIONGRAM/images/pillowErr.png?raw=true)
