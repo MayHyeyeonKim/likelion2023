@@ -8,6 +8,8 @@ LIONGRAM is a Django-based clone of Instagram.
 
 **Description:**
 This image illustrates the modeling process for the LIONGRAM application.
+<br>
+---
 
 ## Troubleshooting
 
@@ -20,7 +22,8 @@ Pillow is a Python image processing library used for opening, manipulating, savi
 A solution to resolve Pillow errors is to install Pillow by running the following command: **"python3 -m pip install Pillow."**
 
 This library is commonly used in Python projects that involve image processing and manipulation.
-
+<br>
+<br>
 #### [2] CSRF-related errors
 ![CSRF_Err](https://github.com/MayHyeyeonKim/likelion2023/blob/main/LIONGRAM/images/CSRFErr.png?raw=true)
 
