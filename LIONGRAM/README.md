@@ -1,18 +1,12 @@
 # LIKELION - LIONGRAM
-
 LIONGRAM is a Django-based clone of Instagram.
 
----
 ## Modeling
 ![modeling_image](https://github.com/MayHyeyeonKim/likelion2023/blob/main/LIONGRAM/django_LIONGRAM_modeling.JPG?raw=true)
 
-**Description:**
-This image illustrates the modeling process for the LIONGRAM application.
-<br>
----
+#### Description: This image illustrates the modeling process for the LIONGRAM application.
 
 ## Troubleshooting
-
 #### [1] Pillow-related errors
 ![Pillow_Err](https://github.com/MayHyeyeonKim/likelion2023/blob/main/LIONGRAM/images/pillowErr.png?raw=true)
 
@@ -24,6 +18,7 @@ A solution to resolve Pillow errors is to install Pillow by running the followin
 This library is commonly used in Python projects that involve image processing and manipulation.
 <br>
 <br>
+---
 #### [2] CSRF-related errors
 ![CSRF_Err](https://github.com/MayHyeyeonKim/likelion2023/blob/main/LIONGRAM/images/CSRFErr.png?raw=true)
 
