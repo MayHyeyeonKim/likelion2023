@@ -7,7 +7,7 @@ LIONGRAM is a Django-based clone of Instagram.
 #### Description: This image illustrates the modeling process for the LIONGRAM application.
 
 ## Troubleshooting
-#### [1] Pillow-related errors
+#### [1] [Pillow-related errors](https://stackoverflow.com/questions/39179948/how-do-i-install-pil-pillow-for-python-3-6)
 ![Pillow_Err](https://github.com/MayHyeyeonKim/likelion2023/blob/main/LIONGRAM/images/pillowErr.png?raw=true)
 
 **Solution:**
@@ -19,11 +19,11 @@ This library is commonly used in Python projects that involve image processing a
 <br>
 
 ---
-#### [2] CSRF-related errors
+#### [1] [CSRF-related errorss](https://docs.djangoproject.com/en/4.2/howto/csrf/)
 ![CSRF_Err](https://github.com/MayHyeyeonKim/likelion2023/blob/main/LIONGRAM/images/CSRFErr.png?raw=true)
 
 **Solution:**
 CSRF stands for Cross-Site Request Forgery, an attack that involves executing malicious web requests with the authority of an authenticated user. To mitigate this, we used CSRF tokens as a solution.
 
-As a solution, "added {% csrf_token %} to post_form.html as shown in the image below."
+As a solution, added {% csrf_token %} to post_form.html as shown in the image below.
  ![CSRF_Err](https://github.com/MayHyeyeonKim/likelion2023/blob/main/LIONGRAM/images/CSRFErrSolution.png?raw=true)
