@@ -14,8 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from posts.views import index, url_view, url_parameter_view, funtion_view, class_view, post_list_view, post_detail_view, post_create_view, post_update_view, post_delete_view 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("admin/", admin.site.urls),
+    path('url/', url_view),
+    path('url/<str:username>/', url_parameter_view), #경로로 받기
+    path('fbv/', funtion_view),
+    path('cbv/', class_view.as_view()),
+    path('',index, name='index'),
+    path('posts/', include('posts.urls', namespace='posts')),
 ]
