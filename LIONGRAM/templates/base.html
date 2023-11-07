@@ -20,7 +20,11 @@
             <ul class="bottom-menu-group">
                 <li><img src="{% static 'icons/home_outlined_black_36dp.svg' %}" alt="Home"></li>
                 <li><img src="{% static 'icons/search_outlined_black_36dp.svg' %}" alt="Search"></li>
-                <li><img src="{% static 'icons/add_box_outlined_black_36dp.svg' %}" alt="Post"></li>
+                <li>
+                    <a href="{% url 'posts:post-create' %}">
+                        <img src="{% static 'icons/add_box_outlined_black_36dp.svg' %}" alt="Post">
+                    </a>
+                </li>
                 <li><img src="{% static 'icons/favorite_outlined_black_36dp.svg' %}" alt="Like"></li>
                 <li><img src="{% static 'icons/account_circle_outlined_black_36dp.svg' %}" alt="Profile"></li>
             </ul>
