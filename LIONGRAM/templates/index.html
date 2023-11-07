@@ -1,18 +1,11 @@
 {% extends 'base.html' %}
-{% block title %} 인덱스 {% endblock %}
+{% load static %}
+{% block title %} Home {% endblock %}
 
 {% block content %}
 <main>
     <div class="card-list">
-        <p> 여기는 다음 영상에서 </p>
-    </div>
-    <div>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>Search</li>
-            </ul>
-        </nav>
+        {% include 'mixin/posts/post_card.html' %}
     </div>
 </main>
 {% endblock %}
