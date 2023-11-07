@@ -17,7 +17,7 @@ This image illustrates the modeling process for the LIONGRAM application.
 **Solution:**
 Pillow is a Python image processing library used for opening, manipulating, saving, and performing various image operations. One of the reasons Pillow errors occur is the absence or improper configuration of the Pillow library.
 
-A solution to resolve Pillow errors is to install Pillow by running the following command: "python3 -m pip install Pillow."
+A solution to resolve Pillow errors is to install Pillow by running the following command: **"python3 -m pip install Pillow."**
 
 This library is commonly used in Python projects that involve image processing and manipulation.
 
