@@ -19,7 +19,7 @@ This library is commonly used in Python projects that involve image processing a
 <br>
 
 ---
-#### [1] [CSRF-related error](https://docs.djangoproject.com/en/4.2/howto/csrf/)
+#### [2] [CSRF-related error](https://docs.djangoproject.com/en/4.2/howto/csrf/)
 ![CSRF_Err](https://github.com/MayHyeyeonKim/likelion2023/blob/main/LIONGRAM/images/CSRFErr.png?raw=true)
 
 **Solution:**
