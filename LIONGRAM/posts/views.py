@@ -6,7 +6,7 @@ from .models import Post
 
 
 def index(request):
-    post_list = Post.objects.all().order_by('-created_at') #Post 전체 조회 / 최신순으로 정렬 .order_by('-created_at')
+    post_list = Post.objects.all().order_by('-created_at') #Post 전체 조회 / 최신순으로 정렬 order_by('-created_at')
     context = {
             "post_list" : post_list
         }

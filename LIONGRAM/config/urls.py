@@ -8,7 +8,7 @@ from posts.views import index, url_view, url_parameter_view, funtion_view, class
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('url/', url_view),
-    path('url/<str:username>/', url_parameter_view), #경로로 받기
+    path('url/<str:username>/', url_parameter_view), #경로로
     path('fbv/', funtion_view),
     path('cbv/', class_view.as_view()),
 
