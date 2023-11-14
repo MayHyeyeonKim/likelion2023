@@ -21,7 +21,14 @@ def post_list_view(request):
     return render(request, 'posts/post_list.html', context)
 
 def post_detail_view(request, id):
-    return render(request, 'posts/post_detail.html')
+    try:
+        post = Post.objects.get(id=id)
+    except Post.DoesNotExist:
+        return redirect('index')
+    context = {
+        'post' : post,
+    }
+    return render(request, 'posts/post_detail.html', context)
 
 @login_required # 이 함수는 로그인했을때만 처리한다
 def post_create_view(request):
