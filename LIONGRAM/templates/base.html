@@ -18,7 +18,11 @@
     <div>
         <nav>
             <ul class="bottom-menu-group">
-                <li><img src="{% static 'icons/home_outlined_black_36dp.svg' %}" alt="Home"></li>
+                <li>
+                    <a href="{% url 'index' %}">
+                        <img src="{% static 'icons/home_outlined_black_36dp.svg' %}" alt="Home">
+                    </a>
+                </li>
                 <li><img src="{% static 'icons/search_outlined_black_36dp.svg' %}" alt="Search"></li>
                 <li>
                     <a href="{% url 'posts:post-create' %}">

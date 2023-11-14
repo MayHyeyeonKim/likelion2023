@@ -6,6 +6,10 @@
         <a href="#">
             <span class="card__user-name">{{ post.writer }}</span>
         </a>
+        {% if request.user == post.writer %}
+            <a href="{% url 'posts:post-update' post.id %}"> 수정하기 </a> | 
+            <a href="{% url 'posts:post-delete' post.id %}"> 삭제하기 </a>
+        {% endif %}
     </div>
     <div class="card__body">
         <div>
@@ -25,7 +29,7 @@
                 <img class="card__btn" src="{% static 'icons/bookmark_outlined_black_36dp.svg' %}" alt="북마크">
             </div>
         </div>
-        <div class="card_content">
+        <div class="card_content"> 
             <span class="card__like-num">좋아요 00개</span> 
             <div class="card__main-text">
                 <p><span class="card__user-name">{{ post.writer }}</span>
