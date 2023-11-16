@@ -3,7 +3,7 @@ from django.http import HttpResponse, JsonResponse, Http404
 from django.views.generic.list import ListView
 from django.contrib.auth.decorators import login_required
 from .models import Post
-
+from .forms import PostBaseForm
 
 def index(request):
     post_list = Post.objects.all().order_by('-created_at') #Post 전체 조회 / 최신순으로 정렬 order_by('-created_at')
@@ -45,7 +45,23 @@ def post_create_view(request):
             writer=request.user,
         )
         return redirect('index') 
-    
+
+def post_create_form_view(request):
+    if request.method == 'GET':
+        form = PostBaseForm()
+        context = {'form': form}
+        return render(request, 'posts/post_form2.html', context)
+    else:
+        form = PostBaseForm(request.POST, request.FILES)
+        if form.is_valid():
+            Post.objects.create(
+                image=form.cleaned_data['image'],
+                content=form.cleaned_data['content'],
+                writer=request.user
+            )
+        else:
+            return redirect('posts:post-create')
+        return redirect('index')
 
 def post_update_view(request,id):
     # post = Post.objects.get(id=id)
