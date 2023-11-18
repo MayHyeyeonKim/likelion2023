@@ -1,9 +1,11 @@
+from wsgiref.util import request_uri
 from django.shortcuts import render, redirect, get_object_or_404
-from django.http import HttpResponse, JsonResponse, Http404
+from django.http import Http404, HttpResponse, JsonResponse
 from django.views.generic.list import ListView
 from django.contrib.auth.decorators import login_required
+
+from .forms import PostBaseForm, PostCreateForm, PostDetailForm
 from .models import Post
-from .forms import PostBaseForm
 
 def index(request):
     post_list = Post.objects.all().order_by('-created_at') #Post 전체 조회 / 최신순으로 정렬 order_by('-created_at')
@@ -27,6 +29,7 @@ def post_detail_view(request, id):
         return redirect('index')
     context = {
         'post' : post,
+        'form' : PostDetailForm(),
     }
     return render(request, 'posts/post_detail.html', context)
 
