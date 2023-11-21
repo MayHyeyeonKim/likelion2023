@@ -51,11 +51,12 @@ def post_create_view(request):
 
 def post_create_form_view(request):
     if request.method == 'GET':
-        form = PostBaseForm()
+        form = PostCreateForm()
         context = {'form': form}
         return render(request, 'posts/post_form2.html', context)
     else:
-        form = PostBaseForm(request.POST, request.FILES)
+        form = PostCreateForm(request.POST, request.FILES)
+        
         if form.is_valid():
             Post.objects.create(
                 image=form.cleaned_data['image'],

@@ -16,13 +16,24 @@ class PostBaseForm(forms.ModelForm):
         model = Post
         fields = '__all__'
 
+from django.core.exceptions import ValidationError
 class PostCreateForm(PostBaseForm):
     class Meta(PostBaseForm.Meta):
-        fields= ['image', 'content']
+        fields = ['image', 'content']
+    
+    def clean_content(self):
+        data = self.cleaned_data['content']
+        if "비속어" == data:
+            raise ValidationError("'비속어'는 사용하실 수 없습니다.")
+
+        return data
 
 class PostUpdateForm(PostBaseForm):
     class Meta(PostBaseForm.Meta):
         fields= ['image', 'content']
     
 class PostDetailForm(PostBaseForm):
-    pass
+    def __init__(self, *args, **kwargs):
+        super(PostDetailForm, self).__init__(*args, **kwargs)
+        for key in self.fields:
+            self.fields[key].widget.attrs['disabled'] = True
